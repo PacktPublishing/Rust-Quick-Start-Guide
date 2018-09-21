@@ -1,0 +1,6 @@
+[package]
+name = "chapter04"
+version = "0.1.0"
+authors = ["Daniel Arbuckle <djarb@highenergymagic.org>"]
+
+[dependencies]
