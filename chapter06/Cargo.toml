@@ -1,0 +1,7 @@
+[package]
+name = "chapter06"
+version = "0.1.0"
+authors = ["Daniel Arbuckle <djarb@highenergymagic.org>"]
+
+[dependencies]
+rand = "0.5.5"
