@@ -282,23 +282,28 @@ pub enum NotExample {
     False,
 }
 
-impl Not for NotExample {
-    type Output = NotExample;
+// Disabling Sync is an upcoming feature. At the time of this writing,
+// it is not available in Rust's stable version
 
-    fn not(self) -> NotExample {
-        match self {
-            NotExample::True => NotExample::False,
-            NotExample::False => NotExample::True,
-        }
-    }
-}
+// #![feature(optin_builtin_traits)]
 
-pub enum NotSyncExample {
-    Good,
-    Bad,
-}
+// impl Not for NotExample {
+//     type Output = NotExample;
 
-impl !Sync for NotSyncExample {}
+//     fn not(self) -> NotExample {
+//         match self {
+//             NotExample::True => NotExample::False,
+//             NotExample::False => NotExample::True,
+//         }
+//     }
+// }
+
+// pub enum NotSyncExample {
+//     Good,
+//     Bad,
+// }
+
+// impl !Sync for NotSyncExample {}
 
 fn main() {
     let x: DefaultExample = Default::default();
